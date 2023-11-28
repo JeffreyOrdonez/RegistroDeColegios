@@ -1,0 +1,11 @@
+@import 'light.css';
+
+:root {
+    /*Colores propios*/
+    --AzulUAM: #019aa8;
+    --GrisCasiOscuro: rgb(105, 105, 105);
+
+
+    --my-highlight: var(--AzulUAM);
+
+}

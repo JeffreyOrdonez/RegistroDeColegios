@@ -1,0 +1,12 @@
+@import 'base.css';
+
+:root {
+
+    --my-gold: #cda434;
+    --my-highlight: var(--my-gold);
+
+    /* Modules left menu */
+    --modules-list-color: var(--my-lightgray);
+    --modules-list-background: var(--my-gold);
+
+}

@@ -9,6 +9,7 @@ import org.openxava.annotations.View;
 
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import java.util.Collection;
 
 
@@ -23,4 +24,6 @@ public class Colegios extends ID_ALL{
     @ElementCollection
     @ListProperties("nombre, telefono, correo")
     private Collection<Directores> director;
+
+
 }
