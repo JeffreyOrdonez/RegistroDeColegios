@@ -1,5 +1,5 @@
 package org.example.RegistroDeColegios.model;
 
-public enum Categoria {
+public enum Categoria  {
     Visitado, Pendiente;
 }

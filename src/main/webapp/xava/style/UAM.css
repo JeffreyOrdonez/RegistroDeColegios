@@ -4,8 +4,41 @@
     /*Colores propios*/
     --AzulUAM: #019aa8;
     --GrisCasiOscuro: rgb(105, 105, 105);
+    --Amarillo: yellow;
+    --AzulUAMOscuro: #006b75;
+    --GrisClaro: #dbdbdb;
 
 
     --my-highlight: var(--AzulUAM);
 
+    /* Modules left menu */
+    --modules-list-color: var(--my-dark-blue);
+    --modules-list-background: var(--AzulUAM);
+    --modules-list-selected-color: var(--my-black);
+
+    /* Module header */
+    --module-header-color: var(--my-black);
+    --module-header-background: var(--AzulUAM);
+
+    /* Backgrounds & labels */
+    --background: var(--GrisClaro);
+    --color: var(--my-red);
+
+    /* Frames */
+    --frame-background: var(--my-red);
+
+    /* Button bar */
+    --button-bar-background: var(--AzulUAMOscuro);
+    --list-formats-color: skyblue;
+    --list-formats-hover-color: var(--terra);
+
+    /* Actions */
+    --action-color: var(--my-black);
+    --action-hover-color: var(--my-black);
+    --action-hover-background: gold;
+    --default-action-button-background: var(--my-highlight);
+
+    /* Editors */
+    --required-editor-border: blue;
+    --calendar-selected-day: gray;
 }

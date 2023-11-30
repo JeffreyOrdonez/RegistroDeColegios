@@ -21,4 +21,8 @@ public class ID_ALL {
     @Column(length = 35)
     @Hidden
     private String id;
+
+    public void delete() {
+        throw new RuntimeException("No se permite eliminar registros de esta entidad.");
+    }
 }
