@@ -12,7 +12,8 @@ import javax.persistence.Entity;
 @Setter
 
 public class Departamento extends ID_ALL {
-
+    @ReadOnly
+    @Required
     private String nombre;
 
 }

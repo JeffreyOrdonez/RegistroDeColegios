@@ -15,8 +15,12 @@ import javax.persistence.ManyToOne;
 @Setter
 
 public class Municipio extends ID_ALL {
-
+    @Required
+    @ReadOnly
     private String nombre;
+
+    @Required
+    @ReadOnly
     @ManyToOne(fetch= FetchType.LAZY)
     private Departamento departamento;
 }

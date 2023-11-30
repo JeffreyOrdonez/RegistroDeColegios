@@ -4,6 +4,7 @@ package org.example.RegistroDeColegios.model;
 import lombok.Getter;
 import lombok.Setter;
 import org.openxava.annotations.ListProperties;
+import org.openxava.annotations.Required;
 import org.openxava.annotations.View;
 
 
@@ -18,7 +19,7 @@ import java.util.Collection;
 @Setter
 @View(name="Simple",members = "nombreColegio")
 public class Colegios extends ID_ALL{
-
+    @Required
     private String nombreColegio;
 
     @ElementCollection

@@ -25,7 +25,7 @@ public class Registros extends ID_ALL {
     private Colegios colegio;
 
     @Required
-    private Tipodehorario tipo_de_horario;
+    private Tipodehorario horario;
 
 
     @Required
@@ -65,14 +65,16 @@ public class Registros extends ID_ALL {
     @ReadOnly
     private Double porcentajeExito;
 
+
     @Depends("alumnosInteresados, alumnosGraduados")
     public Double getPorcentajeExito() {
-        if (alumnosInteresados == 0 || alumnosGraduados <= alumnosInteresados) {
+        if (alumnosInteresados == 0) {
             return 0.0;
         } else {
             return ((double) alumnosInteresados / alumnosGraduados) * 100;
         }
     }
+
 
     public Categoria getCategoria() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
@@ -88,6 +90,9 @@ public class Registros extends ID_ALL {
     @PreUpdate
     public void validarFecha() {
 
+        if (alumnosInteresados >= alumnosGraduados) {
+            throw new IllegalArgumentException("La cantidad de alumnos interesados debe ser menor que la cantidad de alumnos graduados");
+        }
 
         if (categoria == Categoria.Pendiente && fecha.isBefore(LocalDate.now())) {
             throw new IllegalArgumentException("La fecha no puede ser anterior al día actual para la categoría PENDIENTE");
