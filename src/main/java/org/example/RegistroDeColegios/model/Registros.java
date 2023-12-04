@@ -24,6 +24,7 @@ public class Registros extends ID_ALL {
     @ReferenceView("Simple")
     private Colegios colegio;
 
+
     @Required
     private Tipodehorario horario;
 
@@ -49,17 +50,21 @@ public class Registros extends ID_ALL {
     @DescriptionsList(depends = "departamento", condition = "${departamento.id} = ?")
     private Municipio municipio;
 
+    @Required
+    @Column(length = 300)
+    private String direccion;
+
     @Property
     @Required
     @Pattern(regexp="([01]?[0-9]|2[0-3]):[0-5][0-9]")
     private String hora;
 
 
-    @Required
+
     @Min(0)
     private int alumnosInteresados;
     @Min(0)
-    @Required
+
     private int alumnosGraduados;
     @Min(0)
     @ReadOnly
@@ -101,6 +106,8 @@ public class Registros extends ID_ALL {
             throw new IllegalArgumentException("La fecha no puede ser posterior al día actual para la categoría VISITADO");
         }
     }
-
+    @Required
+    @Column(length = 300)
+    private String comentarios;
 
 }
