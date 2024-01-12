@@ -56,7 +56,7 @@ public class Registros extends ID_ALL {
 
     @Property
     @Required
-    @Pattern(regexp="([01]?[0-9]|2[0-3]):[0-5][0-9]")
+    @Pattern(regexp="([01]?[0-9]|2[0-3]):[0-5][0-8]")
     private String hora;
 
 
